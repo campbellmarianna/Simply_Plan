@@ -1,0 +1,14 @@
+A Task Manager for those who want to get things done and keep it simple.
+
+add a Task
+delete a Task
+view a task
+-------------------------------------------------
+add an image of the person who requested the Task
+add the end goal
+get all the tasks and the end goal in a workflow diagram
+
+Notes:
+- make each task an object(task_name, task_description, image, task_impact)
+
+- many tasks are stored in a dictionary (key: end goal, value: list of tasks(objects))
