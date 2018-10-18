@@ -78,6 +78,7 @@ def select(function_code):
         return False
     #Catch all - Works
     else:
+        # isalpha
         print("Unknown Option")
     return True
 

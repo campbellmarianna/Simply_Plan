@@ -12,3 +12,11 @@ Notes:
 - make each task an object(task_name, task_description, image, task_impact)
 
 - many tasks are stored in a dictionary (key: end goal, value: list of tasks(objects))
+
+- allow the user to pick the shape the task will go in, in the diagram
+
+- in the presentation of Simply Plan come down in the competitive analysis diagram
+
+- make it something you can print out
+
+- Create an introduction for what this can be used for
