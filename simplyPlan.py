@@ -1,37 +1,36 @@
 class Task:
-    def __init__(self, task_name, image, task_impact_description):
-        self.name = task_name
+    def __init__(self, name, image, impact_description):
+        self.name = name
         self.image = image
-        self.impact = task_impact_description
-
-    # tasks_list = list()
+        self.impact_description = impact_description
+        self.tasks = list()
 
     #Create
     def create(item):
-        tasks_list.append(item)
+        self.tasks.append(item)
 
     #Read
     def read(index):
-        print(tasks_list[index])
+        print(task_name_list[index])
 
     #Update
-    def update(index, item):
-        tasks_list[int(index)] = str(item)
+    def update(self, index, item):
+        self.tasks[int(index)] = str(item)
 
     #Destroy
     def destroy(index):
-        tasks_list.pop(int(index))
+        task_name_list.pop(int(index))
 
-    def list_all_items():
+    def list_all_items(self):
         index = 0
-        for list_item in tasks_list:
+        for list_item in self.tasks:
             print("{} {}".format(index, list_item))
             index += 1
 
     # Mark Complete - Add code here that marks an item as completed
     def mark_completed(index):
             # print ("√" + checklist[str(index)]
-            tasks_list[int(index)] = "√" + tasks_list[index]
+            task_name_list[int(index)] = "√" + task_name_list[index]
             # print("{} √{}".format(index, list_item))
             # checklist[int(index)] =
             #return("√" + checklist[index])
@@ -87,20 +86,14 @@ class Task:
     #     running = select(selection)
 
 
-class Visual:
+class Visual():
     #create helper functions for the task objects
         # a helpful function if the image link is an image
         # a helpful function to make sure the user doesn't input words to break
         # your code
 
     def build_task_one(self):
-        #create task_name
-        task_name = input("Input Step 1 here: ")
-        print("Who requested the task from you.")
-        # input image url
-        image = input("Input an image of the person who requested the task here ->")
-        task_impact_description = input("What impact will this task have on the end goal?")
-        task_1 = Task(task_name, image, task_impact_description)
+        pass
 
     def build_task_two():
         pass
@@ -108,31 +101,136 @@ class Visual:
     def build_task_three(task_1):
         pass
 
-    def visualize():
+    def visualize(self, task_1, end_goal_name):
+        print("\n")
+        print("Here is a workflow diagram of your tasks!!!")
         print("           ___________________________              ")
         print("          /                           \                ")
-        print(f"        |   {self.task_1.task_name}   |                ")
+        print(f"                {task_1.tasks[0]}                         ")
+        print(f" TASK IMPACT:                                         ")
+        print(f" {task_1.impact_description}                           ")
+        print("                           Who you are doing this for: ")
+        print(f"                              {task_1.image}          ")
         print("          \                           /                ")
         print("           \  _____________________  /                  ")
+        print("                       ||                               ")
+        print("                       ||                              ")
+        print("                       \/                              ")
+        print("           ___________________________              ")
+        print("          /                           \                ")
+        print(f"                {task_1.tasks[1]}                         ")
+        print(f" TASK IMPACT:                                         ")
+        print(f" {task_1.impact_description}                           ")
+        print("                           Who you are doing this for: ")
+        print(f"                              {task_1.image}          ")
+        print("          \                           /                ")
+        print("           \  _____________________  /                  ")
+        print("                       ||                               ")
+        print("                       ||                              ")
+        print("                       \/                              ")
+        print("           ___________________________              ")
+        print("          /                           \                ")
+        print(f"                {task_1.tasks[2]}                         ")
+        print(f" TASK IMPACT:                                         ")
+        print(f" {task_1.impact_description}                           ")
+        print("                           Who you are doing this for: ")
+        print(f"                              {task_1.image}          ")
+        print("          \                           /                ")
+        print("           \  _____________________  /                  ")
+        print("                       ||                               ")
+        print("                       ||                              ")
+        print("                       \/                              ")
+        print("           ___________________________                 ")
+        print("          /                           \                ")
+        print("                  END GOAL:                            ")
+        print(f"              {end_goal_name}                         ")
+        print("          \                           /                ")
+        print("           \  _____________________  /                 ")
+
     def simply_plan(self):
         # get_tasks_for_goal = 3
+        print("\n")
         print("Hi Friend! Welcome to Simply Plan!")
-        end_goal = input("What do you want to accomplish today? ")
+        print("Think in your mind what you want to accomplish today? ")
+        print("\n")
+        pause1 = input("(press enter to continue)")
+        print("\n")
         print("I know you want to get a lot of things done.")
         print("However, focus on getting a piece of a project done")
-        print("or setting yourself up for sucess for a project your")
+        print("or setting yourself up for success for a project your")
         print("wanting to build in the near future.")
+        print("\n")
+        pause2 = input("(press enter to continue)")
+        print("\n")
         print("Furthermore, if you are part of a team you probably get many")
-        print("request from your team members for a projectself.")
-        print("Make your goal for today the goal of that project. ")
-
-        print(f"Your goal: {end_goal}")
-        end_goal_name = input("Give your goal a title, such as Finish CS Assignment. ->")
+        print("requests from your team members for a project.")
+        print("With that in mind what will your goal be for today?")
+        print("Suggestion: Make your goal the goal of that project.")
+        end_goal_name = input("Input Goal Here-> ")
+        print("\n")
+        pause3 = input("(press enter to continue)")
+        print("\n")
+        # end_goal_name = input("Give your goal a title, such as Finish CS Assignment.-> ")
         # while get_tasks_for_goal > 0:
+        print("\n")
         print("In the perspective of 1 to 3 steps, what would those steps be to accomplish your goal.")
-        print("For instance, to finish my CS Assignment I need to complete challenge #1 in the course packet.")
-        visual.build_task_one()
-        visual.visualize()
+        print("For instance, to finish my Intenive Project I need to make a digital prototype.")
+        # build task 1
+        # create task_name
+        print("\n")
+        name = input("Input Step 1 here: ")
+        print("Who requested the task from you.")
+        print("\n")
+        # input image url
+        image = input("Input an image of the person who requested the task here -> ")
+        print("\n")
+        impact_description = input("What impact will this task have on the end goal?")
+        task_1 = Task(name, image, impact_description)
+        task_name = task_1.name
+        task_1.tasks.append(task_name)
+        # build task 2
+        # create task_name
+        print("\n")
+        name = input("Input Step 2 here: ")
+        print("Who requested the task from you.")
+        print("\n")
+        # input image url
+        image = input("Input an image of the person who requested the task here -> ")
+        print("\n")
+        impact_description = input("What impact will this task have on the end goal?")
+        task_2 = Task(name, image, impact_description)
+        task_name = task_2.name
+        task_1.tasks.append(task_name)
+
+        # create task_name
+        print("\n")
+        name = input("Input Step 3 here: ")
+        print("Who requested the task from you.")
+        print("\n")
+        # input image url
+        image = input("Input an image of the person who requested the task here -> ")
+        print("\n")
+        impact_description = input("What impact will this task have on the end goal?")
+        task_3 = Task(name, image, impact_description)
+        task_name = task_3.name
+        task_1.tasks.append(task_name)
+        # Display workflow diagram
+        visual.visualize(task_1, end_goal_name)
+        #task_1.create(task_name)
+        change = True
+        while change:
+            change_task = input("Do you want to change the name of the task? (Y/N)")
+            if change_task.upper() == "Y":
+                task_1.list_all_items()
+                print("\n")
+                input_item = input("What is the index of the item you want to update? ")
+                print("\n")
+                input_update = input("What title would you like to replace it with? -> ")
+                task_1.update(input_item, input_update)
+                task_1.list_all_items()
+            if change_task.upper() == "N":
+                visual.visualize(task_1, end_goal_name)
+                change = False
         # build_task_two()
         # build_task_three()
         #get_tasks_for_goal -= 1
