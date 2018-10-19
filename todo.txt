@@ -20,3 +20,5 @@ Notes:
 - make it something you can print out
 
 - Create an introduction for what this can be used for
+
+- allow the user to add multiple tasks
