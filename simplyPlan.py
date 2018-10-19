@@ -4,7 +4,7 @@ class Task:
         self.image = image
         self.impact = task_impact_description
 
-    tasks_list = list()
+    # tasks_list = list()
 
     #Create
     def create(item):
@@ -27,6 +27,7 @@ class Task:
         for list_item in tasks_list:
             print("{} {}".format(index, list_item))
             index += 1
+
     # Mark Complete - Add code here that marks an item as completed
     def mark_completed(index):
             # print ("√" + checklist[str(index)]
@@ -54,10 +55,8 @@ class Task:
         #Read item
         elif function_code =="R" or function_code == "r":
             input_item = user_input("What is the number of that item? ")
-
             #Remember that item_index (was used as the variable that holds user input and inside read below) must actually exist or our program will crash.
             read(int(input_item))
-
         # Update item
         elif function_code == "U" or function_code == "u":
             input_item = user_input("What is the index of the item you want to update? ")
@@ -87,6 +86,7 @@ class Task:
     #         "Press A to Add to list, D to Delete, R to access an item, U to Update item, C to mark as Completed,and P to show list. Press Q to Exit ")
     #     running = select(selection)
 
+
 class Visual:
     #create helper functions for the task objects
         # a helpful function if the image link is an image
@@ -102,22 +102,22 @@ class Visual:
         task_impact_description = input("What impact will this task have on the end goal?")
         task_1 = Task(task_name, image, task_impact_description)
 
-
-
-
-
     def build_task_two():
         pass
 
-    def build_task_three():
+    def build_task_three(task_1):
         pass
 
+    def visualize():
+        print("           ___________________________              ")
+        print("          /                           \                ")
+        print(f"        |   {self.task_1.task_name}   |                ")
+        print("          \                           /                ")
+        print("           \  _____________________  /                  ")
     def simply_plan(self):
         # get_tasks_for_goal = 3
         print("Hi Friend! Welcome to Simply Plan!")
-
         end_goal = input("What do you want to accomplish today? ")
-
         print("I know you want to get a lot of things done.")
         print("However, focus on getting a piece of a project done")
         print("or setting yourself up for sucess for a project your")
@@ -132,9 +132,9 @@ class Visual:
         print("In the perspective of 1 to 3 steps, what would those steps be to accomplish your goal.")
         print("For instance, to finish my CS Assignment I need to complete challenge #1 in the course packet.")
         visual.build_task_one()
+        visual.visualize()
         # build_task_two()
         # build_task_three()
-
         #get_tasks_for_goal -= 1
         # program loop that prompts the user to create a goal
             # inside that goal they assign task
