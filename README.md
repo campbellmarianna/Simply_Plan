@@ -5,7 +5,7 @@ A day to day task manager for those who want to get things done and keep it simp
 People who work on teams. Simply Plan is for the team member who has been given a list of task and will use Simply Plan to do three of those task in one day.
 ​
 ## Experience
-A user opens the app they are asked for the goal of what they want to get done that day. After that they are asked the task 3 tasks they need to do today to reach that goal. For each task the user is requested to upload an image of the person who requested and the impact the task will have on the goal. Once they press down the user will receive a visual representation of the tasks and the goal in a workflow diagram. The user can print it out or edit the tasks.
+A user opens the app they are asked for the goal of what they want to get done that day. After that they are asked the 3 tasks they need to do that day to reach their goal. For each task the user is requested to upload an image of the person who requested the task and the impact the task will have on the goal. Once they press done the user will receive a visual representation of the tasks and the goal in a workflow diagram. The user can print it out or edit the tasks.
 ​
 # Technical
 ## Models
@@ -16,8 +16,18 @@ A user opens the app they are asked for the goal of what they want to get done t
 ​
 ## Views
 Two views will be used for this program such as
-- input (goal, task, image of person who requested the tasks, the impact the task will have on the goal)
-- output (task with image and impact in shape, and arrow pointing to the next shape, and the end goal as the final shape)
+- input
+    - goal
+    - task
+    - image of person who requested the tasks
+    - the impact the task will have on the goal
+- output
+    - task
+    - image
+    - impact
+    - all 3 elements above in a shape
+    - arrow pointing to the next shape
+    - the end goal as the final shape
 
 ​- Stage 1
 ![simply_plan_input_stage_1](https://user-images.githubusercontent.com/40531646/47184812-88893200-d2e0-11e8-8c9d-ee4df41f6898.jpg)
